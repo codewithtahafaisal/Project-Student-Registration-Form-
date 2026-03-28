@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Registration Form</title>
+    <link rel="stylesheet" href="project2.css">
+</head>
+
+<body>
+    <!-- form -->
+    <form action="">
+        <h2>Student Registration Form</h2>
+
+        <!-- personal info -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="row">
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" placeholder="Enter first name" required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" placeholder="Enter last name" required>
+                </div>
+            </div>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="abc@example.com" required>
+
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="********" required>
+
+            <label for="phoneNumber">Phone</label>
+            <input id="phoneNumber" type="tel" placeholder="03XX XXXXXXX" required>
+
+            <label for="dateOfBirth">Date of Birth</label>
+            <input id="dateOfBirth" type="date" required>
+
+            <label for="gender">Gender</label>
+                <input class="inline" name="gender" type="radio">Male
+                <input class="inline" name="gender" type="radio">Female
+                <input class="inline" name="gender" type="radio">Other
+        </fieldset>
+
+        <!-- education -->
+        <fieldset>
+            <legend>Educational Details</legend>
+
+            <label for="qualification">Highest Qualification</label>
+            <select name="qualification" id="qualification" required>
+                <option value="" disabled selected>Select</option>
+                <option value="masters">Masters</option>
+                <option value="bachelors">Bachelors</option>
+                <option value="intermediate">Intermediate/Equivalent</option>
+                <option value="matric">Matric</option>
+            </select>
+
+            <label for="fieldOfStudy">Field of study</label>
+            <select name="fieldOfStudy" id="fieldOfStudy" required>
+                <option value="" disabled selected>Select</option>
+
+                <!-- masters -->
+                <optgroup label="Masters">
+                    <option value="computerScience">Computer Science</option>
+                    <option value="ai">Artificial Intelligence</option>
+                    <option value="ml">Machine Learning</option>
+                    <option value="dataScience">Data Science</option>
+                    <option value="cyberSecurity">Cyber Security</option>
+                </optgroup>
+
+                <!-- bachelors -->
+                <optgroup label="Bachelors">
+                    <option value="computerScience">Computer Science</option>
+                    <option value="ai">Artificial Intelligence</option>
+                    <option value="cyberSecurity">Cyber Security</option>
+                    <option value="softwareEngineering">Software Engineering</option>
+                </optgroup>
+
+                <!-- intermediate -->
+                <optgroup label="Intermediate">
+                    <option value="preEngineering">Pre-Engineering</option>
+                    <option value="computerScience">Computer Science</option>
+                    <option value="preMedical">Pre-Medical</option>
+                    <option value="commerce">Commerce</option>
+                </optgroup>
+
+                <!-- matric -->
+                <optgroup label="Matric">
+                    <option value="computerScience">Computer Science</option>
+                    <option value="bio">Bio</option>
+                </optgroup>
+            </select>
+
+            <label for="skills">Skills</label>
+                <input class="inline" type="checkbox">HTML
+                <input class="inline" type="checkbox">CSS
+                <input class="inline" type="checkbox">JavaScript
+                <input class="inline" type="checkbox">React
+        </fieldset>
+
+        <!-- uploads & preferences -->
+        <fieldset>
+            <legend>Uploads & Preferences</legend>
+            <label for="resume">Upload Resume</label>
+            <input id="resume" type="file" required>
+
+            <label for="time">Available Time</label>
+            <input id="time" type="time" required>
+
+            <label for="experience">Experience Level (0-10)</label>
+            <input type="range" min="0" max="10" required>
+        </fieldset>
+
+        <!-- additional info -->
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="about">About Yourself</label>
+            <textarea rows="4" name="about" id="about" placeholder="Write something about yourself" required></textarea>
+            <input class="inline" type="checkbox" required> I agree to term and conditions
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>
